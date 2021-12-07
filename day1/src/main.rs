@@ -33,23 +33,23 @@ fn split_data(data: &str) -> Vec<isize> {
         .collect()
 }
 
-fn count_increases(data: &Vec<isize>) -> isize {
+fn count_increases(data: &[isize]) -> isize {
     let mut prev = data[0];
     let mut count = 0;
-    for i in 1..data.len() {
-        if data[i] > prev {
+    for &e in data.iter().skip(1) {
+        if e > prev {
             count += 1;
         }
-        prev = data[i];
+        prev = e;
     }
     count
 }
 
-fn find_windowed_increases(size: usize, data: &Vec<isize>) -> isize {
-    let sums = data
+fn find_windowed_increases(size: usize, data: &[isize]) -> isize {
+    let sums: &[isize] = &data
         .windows(size)
         .map(|window| window.iter().sum())
-        .collect();
+        .collect::<Vec<isize>>();
     count_increases(&sums)
 }
 
