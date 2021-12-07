@@ -6,7 +6,8 @@ Run with `cargo run --bin day$N` to get the solution for a given `$N`.
 
 ```shell
 # To run the day 1 exercise
-cargo run --bin dayN 1
+cargo run --bin day1 -- day1/data/input.txt
+cargo run --bin day1 -- -w day1/data/input.txt
 ```
 
 ## Warning
