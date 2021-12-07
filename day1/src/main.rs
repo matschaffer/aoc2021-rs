@@ -50,7 +50,7 @@ fn find_windowed_increases(size: usize, data: &[isize]) -> isize {
         .windows(size)
         .map(|window| window.iter().sum())
         .collect::<Vec<isize>>();
-    count_increases(&sums)
+    count_increases(sums)
 }
 
 #[cfg(test)]
