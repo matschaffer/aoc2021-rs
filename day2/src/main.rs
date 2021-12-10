@@ -98,7 +98,7 @@ mod tests {
         let mut position = Position { x: 0, y: 0 };
         move_robot(
             &mut position,
-            &vec![Move::Forward(5), Move::Down(5), Move::Up(1)],
+            &[Move::Forward(5), Move::Down(5), Move::Up(1)],
         );
         assert_eq!(position.x, 5);
         assert_eq!(position.y, 4);
