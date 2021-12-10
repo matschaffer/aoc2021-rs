@@ -34,7 +34,7 @@ fn main() {
     );
 }
 
-fn move_robot(position: &mut Position, moves: &Vec<Move>) {
+fn move_robot(position: &mut Position, moves: &[Move]) {
     for m in moves {
         match m {
             Move::Forward(n) => {
