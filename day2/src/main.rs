@@ -61,8 +61,7 @@ fn main() {
 
 fn parse_moves(data: &str) -> Vec<Move> {
     let data = split_data(data);
-    let moves: Vec<Move> = data.iter().map(|i| parse_instruction(i)).collect();
-    moves
+    data.iter().map(|i| parse_instruction(i)).collect()
 }
 
 fn sub_move(sub: &mut Sub, moves: &[Move]) {
