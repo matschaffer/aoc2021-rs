@@ -33,7 +33,6 @@ impl Sub {
 fn main() {
     let opt = Opt::from_args();
     let filename = opt.filename;
-
     let data = fs::read_to_string(filename).expect("Something went wrong reading the file");
     let moves = parse_moves(&data);
 
